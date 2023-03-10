@@ -1,0 +1,283 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: quotation_count
+  examples: |
+    - How many Quotations are there?
+    - no of quotations
+    - count of Quotations
+    - number of quotations
+    - What is the total number of Quotations?
+    - How many quotes are in the database?
+    - Can you tell me the count of Quotations?
+    - Count the number of Quotations, please.
+    - I need to know the exact number of Quotations.
+    - Give me the Quotation count, please.
+    - What is the total count of Quotations?
+    - How many Quotations are currently available?
+    - Please provide the number of Quotations.
+
+- intent: quotation_type
+  examples: |
+    - Which type of quotations is [Q00002](quotation_number)?
+    - type of quotation [Q00001](quotation_number)
+    - quotation type [Q00003](quotation_number)
+    - Which type of quotations is [Q00002 - R1](quotation_number)?
+    - type of quotation [Q00001 - R2](quotation_number)
+    - quotation type [Q00003 - R3](quotation_number)
+    - What is the quotation type for [Q00002](quotation_number)?
+    - Can you tell me the quotation type for [Q00001](quotation_number)?
+    - Quotation type for [Q00003](quotation_number)?
+    - I need to know the quotation type for [Q00004](quotation_number).
+    - What's the quotation type for [Q00006](quotation_number)?
+
+- intent: quotation_count_today
+  examples: |
+    - How many Quotations are there today?
+    - no of quotations today
+    - count of Quotations today
+    - number of quotations today
+    - How many Quotations were created today?
+    - Can you tell me the number of quotations generated today?
+    - What is the count of quotations created today?
+    - How many quotes were added to the system today?
+    - What is the current tally of quotations generated today?
+    - How many quotations have been added to the database today?
+    - Can you tell me the total number of quotations created today?
+    - What is the number of quotations that were generated today?
+    - How many quotes were created today?
+
+- intent: quotation_count_monthly
+  examples: |
+    - How many Quotations are there in this month?
+    - no of quotations in this month
+    - count of Quotations in this month
+    - number of quotations in this month
+    - How many quotes were generated this month?
+    - How many quotations have been created in the current month?
+    - Count the number of quotes generated this month
+    - What is the total number of quotations for this month?
+    - Give me the count of quotations created this month
+    - Can you tell me the number of quotations generated in the current month?
+    - How many quotations have been issued in this month so far?
+    - What is the current monthly quotation count?
+    - I need to know how many quotations were generated this month
+    - How many quotations have been made in the current month?
+    - Can you give me the total number of quotations for this month?
+    - Count the quotations that were created this month
+    - Tell me the number of quotations that were generated this month
+    - What is the monthly count of quotations?
+
+
+
+- intent: quotation_count_quaterly
+  examples: |
+    - How many Quotations are there quaterly?
+    - no of quotations quaterly
+    - count of Quotations quaterly
+    - number of quotations quaterly
+    - Could you tell me the number of quotations for this quarter?
+    - What's the count of quotations in the current quarter?
+    - Please provide me with the number of quotations made in the last three months.
+    - What's the total number of quotations for the current quarter?
+    - I'd like to get the quarterly count of quotations.
+
+- intent: revisions_quotation
+  examples: |
+    - no of revisions of [Q00002](quotation_number)
+    - number of revisions of [Q00001](quotation_number)
+    - how much revision of [Q00005](quotation_number)
+    - count of revisions of [Q00001](quotation_number)
+    - quotation revision count of [Q00003](quotation_number)
+    - What is the revision count for [Q00004](quotation_number)?
+    - How many revisions does quotation [Q00007](quotation_number) have?
+    - Can you tell me the number of revisions for [Q00009](quotation_number)?
+    - I want to know the revision count for quotation [Q00011](quotation_number).
+    - How many revisions have been made to quotation [Q00013](quotation_number)?
+    - What is the revision history for [Q00015](quotation_number)?
+    - How many times has quotation [Q00017](quotation_number) been revised?
+    - Please give me the revision count for [Q00019](quotation_number).
+
+- intent: revenue_quotation
+  examples: |
+    - What is the revenue of [Q00002](quotation_number)
+    - revenue of [Q00001](quotation_number)
+    - how much revenue of [Q00005](quotation_number)
+    - What is the revenue of [Q00003 - R3](quotation_number)
+    - revenue of [Q00001 - R3](quotation_number)
+    - how much revenue of [Q00007 - R3](quotation_number)
+    - What is the revenue for quote number [Q00010](quotation_number)?
+    - How much revenue does quote [Q00015](quotation_number) generate?
+    - Can you tell me the revenue of quote [Q00007 - R2](quotation_number)?
+    - What is the revenue of quote [Q00012 - R1](quotation_number)?
+    - How much money does quote [Q00022](quotation_number) bring in?
+    - What's the revenue of quote [Q00005 - R4](quotation_number)?
+
+
+- intent: quotation_status
+  examples: |
+    - What is the status of quotation [Q00001 - R1](quotation_number)?
+    - status of quotation [Q00001](quotation_number)
+    - Can you give me the status of [Q00002](quotation_number)?
+    - Quotation [Q00003 - R2](quotation_number) status?
+    - Status of [Q00004](quotation_number) quotation?
+    - What is the status of my quotation [Q00005](quotation_number)?
+    - Please provide me with the status of [Q00006 - R2](quotation_number).
+    - Can you tell me if [Q00007](quotation_number) has been approved yet?
+    - I need to know the status of my quotation [Q00008](quotation_number) as soon as possible.
+    - Quotation [Q00009](quotation_number) was submitted a week ago, what is its status now?
+    - Is there any update on the status of [Q00010 - R1](quotation_number)?
+    - Could you let me know the current status of [Q00011](quotation_number) please?
+    - I'm checking on the status of [Q00012](quotation_number), can you give me an update?
+    - What is the status of [Q00013 - R3](quotation_number) and when can I expect a response?
+    - Has there been any progress on the status of my quotation [Q00014](quotation_number)?
+
+- intent: quotation_name_address
+  examples: |
+    - can you give me name of [Q00001](quotation_number)
+    - can you give me address of [Q00001](quotation_number)
+    - hey what is name of [Q00001](quotation_number)
+    - name of [Q00001 - R3](quotation_number)
+    - address of [Q00001](quotation_number)
+    - What is the Customer name and Customer address of quotation [Q00001 - R1](quotation_number)?
+    - Can you give me the Customer name and Customer address of [Q00002](quotation_number)?
+    - Quotation [Q00003](quotation_number) Customer name and Customer address?
+    - Customer name and Customer address of [Q00004](quotation_number) quotation?
+    - hey what is the Customer name and Customer address for [Q00020](quotation_number) 
+    - Please provide the name and address for [Q00005](quotation_number)
+    - I need to know the Customer name and address for [Q00006 - R2](quotation_number)
+    - Could you give me the Customer name and address for [Q00007](quotation_number) please?
+    - What is the Customer name and address of [Q00008](quotation_number) and where are they located?
+    - Quotation [Q00009](quotation_number) - can you tell me the Customer name and address?
+    - I would like to know the Customer name and address for [Q00010 - R1](quotation_number)
+    - Is it possible to get the Customer name and address for [Q00011](quotation_number)?
+    - Please provide the Customer name and address for [Q00012](quotation_number) and any other relevant information.
+    - What is the name and address of the Customer for [Q00013 - R3](quotation_number)?
+
+- intent: latest_quotation_revision
+  examples: |
+    - What is the latest quotation revision details of quotation [Q00001](quotation_number)?
+    - Can you give me the latest quotation revision details of [Q00002](quotation_number)?
+    - Quotation [Q00003](quotation_number) latest quotation revision details address?
+    - Customer latest quotation revision details of [Q00004](quotation_number) quotation?
+    - hey what is the Customer latest quotation revision details for [Q00020](quotation_number)
+    - Could you provide me the latest revision details for [Q00005](quotation_number)?
+    - What are the latest quotation revision details for [Q00006 - R2](quotation_number)?
+    - I need to know the latest revision details for [Q00007](quotation_number) please.
+    - What is the latest revision of quotation [Q00008](quotation_number) and what has changed?
+    - Quotation [Q00009](quotation_number) - can you tell me the latest revision details?
+    - I would like to know the latest revision details for [Q00010 - R1](quotation_number)
+    - Is it possible to get the latest revision details for [Q00011](quotation_number)?
+    - Please provide the latest revision details for [Q00012](quotation_number) and any other relevant information.
+    - What is the latest revision and what are the changes made for [Q00013 - R3](quotation_number)?
+
+- intent: list_quotations
+  examples: |
+    - give me the list of quotations
+    - list of quotations
+    - all quotations
+    - quotations list
+    - show me the quotations
+    - give me a list of quotes
+    - display all the quotes
+    - what are the quotes available?
+    - list all the quotations
+    - I want to see the quotations
+    - what are my options for quotes?
+    - can you show me the available quotations?
+    - show me the list of available quotes
+    - what are the different quotations?
+    - can you give me a rundown of the quotations?
+    - what are the quotations I can choose from?
+    - show me the available quotations to choose from
+    - what are the quotations that are available right now?
+    - can you list down the available quotations?

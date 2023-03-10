@@ -1,0 +1,68 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Count the quotations
+  steps:
+  - intent: quotation_count
+  - action: act_quatation_num
+
+- rule: Type quotations
+  steps:
+  - intent: quotation_type
+  - action: act_quatation_type
+
+- rule: revenue quotations
+  steps:
+  - intent: revenue_quotation
+  - action: act_quatation_rev
+
+- rule: revenue quotations count
+  steps:
+  - intent: revisions_quotation
+  - action: act_quatation_rev_count
+
+- rule: quotations count today
+  steps:
+  - intent: quotation_count_today
+  - action: act_quatation_count_today
+
+- rule: quotations count month
+  steps:
+  - intent: quotation_count_monthly
+  - action: act_quatation_count_month
+
+- rule: quotations count quaterly
+  steps:
+  - intent: quotation_count_quaterly
+  - action: act_quatation_count_quaterly
+
+- rule: Say action_quotation_status anytime the quotation_status
+  steps:
+  - intent: quotation_status
+  - action: action_quotation_status
+
+- rule: Say action_quotation_name_address anytime the quotation_name_address
+  steps:
+  - intent: quotation_name_address
+  - action: action_quotation_name_address
+
+- rule: Say action_latest_quotation_revision anytime the latest_quotation_revision
+  steps:
+  - intent: latest_quotation_revision
+  - action: action_latest_quotation_revision
+
+- rule: Say list_latest_quotations anytime the latest_quotation_revision
+  steps:
+  - intent: list_quotations
+  - action: list_latest_quotations

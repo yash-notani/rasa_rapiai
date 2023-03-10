@@ -1,0 +1,65 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+  - intent: quotation_count
+  - action: act_quatation_num
+  - intent: quotation_type
+  - entities:
+    - quotation_number
+  - slot_was_set:
+    - quotation_number
+  - action: act_quatation_type
+  
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+  - intent: revenue_quotation
+  - entities:
+    - quotation_number
+  - slot_was_set:
+    - quotation_number
+  - action: act_quatation_rev
+  - intent: list_quotations
+  - action: list_latest_quotations
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+  - intent: revisions_quotation
+  - entities:
+    - quotation_number
+  - slot_was_set:
+    - quotation_number
+  - action: act_quatation_rev_count
+  - intent: quotation_count_today
+  - action: act_quatation_count_today
+  - intent: quotation_count_monthly
+  - action: act_quatation_count_month
+  - intent: quotation_count_quaterly
+  - action: act_quatation_count_quaterly
+  - intent: quotation_status
+  - action: action_quotation_status
+  - intent: quotation_name_address
+  - action: action_quotation_name_address
+  - intent: latest_quotation_revision
+  - action: action_latest_quotation_revision

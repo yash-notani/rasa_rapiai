@@ -1,0 +1,68 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - quotation_count
+  - quotation_type
+  - revenue_quotation
+  - revisions_quotation
+  - quotation_count_today
+  - quotation_count_monthly
+  - quotation_count_quaterly
+  - quotation_status
+  - quotation_name_address
+  - latest_quotation_revision
+  - list_quotations
+
+entities:
+  - quotation_number
+
+slots:
+  quotation_number:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: quotation_number
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+actions:
+- act_quatation_num
+- act_quatation_type
+- act_quatation_rev
+- act_quatation_rev_count
+- act_quatation_count_today
+- act_quatation_count_month
+- act_quatation_count_quaterly
+- action_quotation_status
+- action_quotation_name_address
+- action_latest_quotation_revision
+- list_latest_quotations
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
